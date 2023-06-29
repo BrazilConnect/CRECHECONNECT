@@ -29,7 +29,8 @@ namespace CrecheConnect
             switch(Console.ReadLine().ToString().ToUpper())
             {
                 case "A":
-                    Console.WriteLine(">>> ADICIONAR <<<");
+                    Console.WriteLine("\n>>> ADICIONAR DADOS <<<");
+                    Console.WriteLine("=======================");
                     Aluno aluno = new Aluno(true);
                     aluno.Save();
                     Console.WriteLine("Aluno adicionado com sucesso!");
@@ -38,7 +39,8 @@ namespace CrecheConnect
                     ChamarMenu();
                     break;
                 case "B":
-                    Console.WriteLine(">>> EXIBIR DADOS <<<");
+                    Console.WriteLine("\n>>> EXIBIR DADOS <<<");
+                    Console.WriteLine("====================");
                     Console.Write("Informe o ID do aluno ou 'todos' para exibir todos os cadastros: ");
                     var escolha = Console.ReadLine().ToUpper();
                     if (escolha == "TODOS")
@@ -72,15 +74,15 @@ namespace CrecheConnect
                             Console.WriteLine("Opção inválida!");
                         }
                     }
+                    Console.WriteLine("Pressione qualquer tecla para voltar ao menu.\n");
                     Console.ReadKey();
                     Thread.Sleep(1000);
-                    Console.Clear();
                     ChamarMenu();
                     break;
                 case "C":
-                    Console.WriteLine(">>> ALTERAR DADOS <<<");
-
-                    Console.Write("Informe o ID do aluno: ");
+                    Console.WriteLine("\n>>> ALTERAR DADOS <<<");
+                    Console.WriteLine("=====================");
+                    Console.Write("Informe o ID do aluno que deseja alterar: ");
                     var idUpdate = long.Parse(Console.ReadLine());
                     var alunoUpdate = new Aluno(idUpdate);
 
@@ -98,8 +100,9 @@ namespace CrecheConnect
                     ChamarMenu();
                     break;
                 case "D":
-                    Console.WriteLine(">>> EXCLUIR DADOS <<<");
-                    Console.Write("Informe o ID do aluno: ");
+                    Console.WriteLine("\n>>> EXCLUIR DADOS <<<");
+                    Console.WriteLine("=====================");
+                    Console.Write("Informe o ID do aluno que deseja excluir: ");
                     var idDelete = long.Parse(Console.ReadLine());
                     var alunoDelete = new Aluno(idDelete);
 
