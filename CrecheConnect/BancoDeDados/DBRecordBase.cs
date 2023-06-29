@@ -18,11 +18,6 @@ namespace CrecheConnect.BancoDeDados
         public abstract DateTime DataNascimento { get; set; }
         public abstract Enumeradores.Genero Genero { get; set; }
 
-        //public void Save()
-        //{
-
-        //}
-
         public void Delete()
         {
             using (var conn = new SqlConnection(DBInfo.DBConnection))

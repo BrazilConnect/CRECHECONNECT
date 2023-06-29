@@ -79,6 +79,7 @@ namespace CrecheConnect
                     break;
                 case "C":
                     Console.WriteLine(">>> ALTERAR DADOS <<<");
+
                     Console.Write("Informe o ID do aluno: ");
                     var idUpdate = long.Parse(Console.ReadLine());
                     var alunoUpdate = new Aluno(idUpdate);
@@ -86,7 +87,6 @@ namespace CrecheConnect
                     if (alunoUpdate.IsValid())
                     {
                         AlterarAluno(alunoUpdate);
-                        Console.WriteLine("Dados alterados com sucesso.");
                     }
                     else
                     {
@@ -199,6 +199,7 @@ namespace CrecheConnect
                 }
 
                 aluno.Update();
+                Console.WriteLine("Dados alterados com sucesso.");
             }
 
         }
